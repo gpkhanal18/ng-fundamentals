@@ -4,6 +4,7 @@ import {EventsAppComponent} from './events-app.component';
 import { EventsListComponent } from './events/events-list/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -11,12 +12,10 @@ import { NavbarComponent } from './nav/navbar/navbar.component';
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, CommonModule],
   providers: [],
-  bootstrap: [EventsAppComponent]
+  bootstrap: [EventsAppComponent],
 })
-export class AppModule { }
+export class AppModule {}
