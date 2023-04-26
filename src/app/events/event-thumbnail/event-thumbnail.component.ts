@@ -16,11 +16,16 @@ export class EventThumbnailComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  handleClickMe(){
-  this.eventClicked.emit(this.event.name);
+  handleClickMe() {
+    this.eventClicked.emit(this.event.name);
   }
 
-  logFoo(){
-    console.log("log Foo");
+  logFoo() {
+    console.log('log Foo');
+  }
+
+  getStartTimeClass() {
+    const isEarlyStart = this.event && this.event.time === '8:00 am';
+    return {green: isEarlyStart, bold: isEarlyStart};
   }
 }
